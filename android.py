@@ -12,7 +12,7 @@ screen_width = info.get('displayWidth')
 
 
 def print_click(x, y, second):
-    print('点击坐标为(' + str(round(x, 2)) + ', ' + str(round(y, 2)) + '), 间隔' + str(round(second, 2)) + '秒')
+    print('点击坐标为(' + str(round(x, 2)) + ', ' + str(round(y, 2)) + '), ' + str(round(second, 2)) + '秒后再次点击')
 
 
 while 1:
@@ -20,6 +20,6 @@ while 1:
     x = random.uniform(screen_width * 4 / 5 + 20, screen_width - 20)
     y = random.uniform(screen_width / 2, screen_width * 2 / 3)
     second = random.uniform(12, 30)
-    time.sleep(second)
     d.click(x, y)
     print_click(x, y, second)
+    time.sleep(second)
