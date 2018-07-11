@@ -1,29 +1,21 @@
 from uiautomator import device as d
 import time
-import datetime
-#点亮屏幕
-def lightScreen():
-    d.screen.on()
+import random
 
-#滑动页面
-def autoSwipe():
-    d.swipe(1000, 500, 200, 500)
-    time.sleep(30)
+# 点亮屏幕
+d.screen.on()
+print(d.info) # 1920 * 1080
 
-# 执行5小时
-if __name__ == '__main__':
-    # 获取当前时间
-    startTime = datetime.datetime.now();
-    while 1:
-        nowTime = datetime.datetime.now();
-        mkt_last = time.mktime(startTime.timetuple());
-        mkt_now = time.mktime(nowTime.timetuple());
-        delt_time = (mkt_now-mkt_last)/60   #转成分钟
-        # 5小时 ＝＝＝ 300分钟
-        leftTime = 300 - delt_time ;
-        if leftTime > 0 :
-            print "剩余" + str(int(leftTime)) + '分钟';
-            autoSwipe();
-        else:
-            print "自动读书完毕";
-            break;
+
+def toFixed(num, ndigits=2):
+    return round(num, ndigits)
+
+
+while 1:
+    # android靠中间区域都是打开菜单，右边大概四分之一才能翻页
+    x = random.uniform(800, 1050)
+    y = random.uniform(1200, 1800)
+    d.click(x, y)
+    second = random.uniform(12, 30)
+    time.sleep(second)
+    print('点击坐标为(' + str(toFixed(x)) + ', ' + str(toFixed(y)) + '), ' + str(toFixed(second)) + '秒后再次点击')

@@ -13,8 +13,10 @@ print(s.window_size()) # iPhone 7p: Size(width=414, height=736)
 import threading
 import random
 
+
 def toFixed(num, ndigits=2):
     return round(num, ndigits)
+
 
 def fun_timer():
     # 随机点击坐标

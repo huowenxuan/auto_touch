@@ -1,9 +1,12 @@
-# 工具
+
+
+# iOS
+## 工具
 * Mac
 * Xcode
 * Python3、pip3
 
-# 安装WebDriverAgent
+## 安装WebDriverAgent
 1. git clone https://github.com/facebook/WebDriverAgent.git
 2. ./Scripts/bootstrap.sh
 3. 打开`WebDriverAgent.xcodeproj`，设置好开发者apple id
@@ -12,14 +15,32 @@
 6. iproxy 8100 8100
 7. 浏览器访问`http://localhost:8100/status`看到json就说明运行成功
 
-# 安装python-wda
+## 安装python-wda
+```
 pip3 install python-wda
+```
 
-# 运行
+## 执行
 在微信读书中打开一本书，然后终端执行：
 
 ```
 git clone https://github.com/huowenxuan/weread_auto_ios
 cd weread_auto_ios
 python3 weread_auto_ios.py
+```
+
+# Android
+## 工具
+* Python3、pip3
+
+## 安装uiautomator
+```
+pip3 install uiautomator
+```
+
+## 执行
+在微信读书中打开一本书，然后终端执行：
+
+```
+python3 android.py
 ```
