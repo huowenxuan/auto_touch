@@ -17,7 +17,7 @@ print(size) # iPhone 7p: Size(width=414, height=736)
 
 
 def print_click(x, y, second):
-    print('点击坐标为(' + str(round(x, 2)) + ', ' + str(round(y, 2)) + '), ' + str(round(second, 2)) + '秒后再次点击')
+    print(str(round(second, 2)) + '秒后点击(' + str(round(x, 2)) + ', ' + str(round(y, 2)) + ')')
 
 
 while 1:
@@ -25,7 +25,7 @@ while 1:
     x = random.uniform(screen_width * 2 / 3 + 20, screen_width - 20)
     y = random.uniform(screen_height / 2, screen_height - 50)
     second = random.uniform(12, 30)
-    s.tap(x, y)
     print_click(x, y, second)
     time.sleep(second)
+    s.tap(x, y)
 
