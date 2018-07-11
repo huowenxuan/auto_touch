@@ -4,18 +4,22 @@ import random
 
 # 点亮屏幕
 d.screen.on()
-print(d.info) # 1920 * 1080
+info = d.info
+print(info) # 1920 * 1080
+
+screen_height = info.get('displayHeight')
+screen_width = info.get('displayWidth')
 
 
-def toFixed(num, ndigits=2):
-    return round(num, ndigits)
+def print_click(x, y, second):
+    print('点击坐标为(' + str(round(x, 2)) + ', ' + str(round(y, 2)) + '), 间隔' + str(round(second, 2)) + '秒')
 
 
 while 1:
-    # android靠中间区域都是打开菜单，右边大概四分之一才能翻页
-    x = random.uniform(800, 1050)
-    y = random.uniform(1200, 1800)
-    d.click(x, y)
+    # android靠中间区域都是打开菜单，右边大概五分之一才能翻页
+    x = random.uniform(screen_width * 4 / 5, screen_width - 20)
+    y = random.uniform(screen_width / 2, screen_width * 2 / 3)
     second = random.uniform(12, 30)
     time.sleep(second)
-    print('点击坐标为(' + str(toFixed(x)) + ', ' + str(toFixed(y)) + '), ' + str(toFixed(second)) + '秒后再次点击')
+    d.click(x, y)
+    print_click(x, y, second)

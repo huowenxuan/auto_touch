@@ -1,4 +1,6 @@
 import wda
+import time
+import random
 
 c = wda.Client('http://localhost:8100')
 print(c.status())
@@ -8,28 +10,22 @@ print(c.status())
 s = c.session()
 
 # 屏幕尺寸
-print(s.window_size()) # iPhone 7p: Size(width=414, height=736)
-
-import threading
-import random
-
-
-def toFixed(num, ndigits=2):
-    return round(num, ndigits)
+size = s.window_size()
+screen_width = size[0]
+screen_height = size[1]
+print(size) # iPhone 7p: Size(width=414, height=736)
 
 
-def fun_timer():
+def print_click(x, y, second):
+    print('点击坐标为(' + str(round(x, 2)) + ', ' + str(round(y, 2)) + '), 间隔' + str(round(second, 2)) + '秒')
+
+
+while 1:
     # 随机点击坐标
-    x = random.uniform(300, 400)
-    y = random.uniform(400, 700)
-    s.tap(x, y)
-    global timer
-    # 随机时间，正常阅读一页的时间为12-30秒
+    x = random.uniform(screen_width * 2 / 3, screen_width - 20)
+    y = random.uniform(screen_height / 2, screen_height - 50)
     second = random.uniform(12, 30)
-    timer = threading.Timer(second, fun_timer)
-    print('点击坐标为(' + str(toFixed(x)) + ', ' + str(toFixed(y)) + '), ' + str(toFixed(second)) + '秒后再次点击')
-    timer.start()
+    time.sleep(second)
+    s.tap(x, y)
+    print_click(x, y, second)
 
-# 打开3秒后开始循环
-timer = threading.Timer(3, fun_timer)
-timer.start()
