@@ -17,9 +17,9 @@ def print_click(x, y, second):
 
 while 1:
     # android靠中间区域都是打开菜单，右边大概五分之一才能翻页
-    x = random.uniform(screen_width * 4 / 5, screen_width - 20)
+    x = random.uniform(screen_width * 4 / 5 + 20, screen_width - 20)
     y = random.uniform(screen_width / 2, screen_width * 2 / 3)
-    second = random.uniform(12, 30)
+    second = random.uniform(0, 1)
     time.sleep(second)
     d.click(x, y)
     print_click(x, y, second)

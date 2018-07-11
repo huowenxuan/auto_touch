@@ -22,7 +22,7 @@ def print_click(x, y, second):
 
 while 1:
     # 随机点击坐标
-    x = random.uniform(screen_width * 2 / 3, screen_width - 20)
+    x = random.uniform(screen_width * 2 / 3 + 20, screen_width - 20)
     y = random.uniform(screen_height / 2, screen_height - 50)
     second = random.uniform(12, 30)
     time.sleep(second)
