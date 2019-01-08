@@ -17,16 +17,16 @@
 
 ## 安装python-wda
 ```
-pip3 install python-wda
+pip3 install --pre facebook-wda
 ```
 
 ## 执行
 在微信读书中打开一本书，然后终端执行：
 
 ```
-git clone https://github.com/huowenxuan/weread_auto_ios
-cd weread_auto_ios
-python3 weread_auto_ios.py
+git clone https://github.com/huowenxuan/weread_auto
+cd weread_auto
+python3 ios.py
 ```
 
 # Android
@@ -42,5 +42,7 @@ pip3 install uiautomator
 在微信读书中打开一本书，然后终端执行：
 
 ```
+git clone https://github.com/huowenxuan/weread_auto
+cd weread_auto
 python3 android.py
 ```
