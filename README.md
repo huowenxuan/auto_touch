@@ -26,8 +26,8 @@ pip3 install --pre facebook-wda
 
 ```
 git clone https://github.com/huowenxuan/weread_auto
-cd weread_auto
-python3 ios.py
+cd auto_touch
+python3 weread_ios.py
 ```
 
 ### Android
@@ -44,9 +44,13 @@ pip3 install uiautomator
 
 ```
 git clone https://github.com/huowenxuan/weread_auto
-cd weread_auto
-python3 android.py
+cd auto_touch
+python3 weread_android.py
 ```
 
 ## 趣头条小视频自动上拉（仅限android）
-打开趣头条app，点击小视频tab
+打开趣头条app，点击小视频tab，执行：
+
+```
+python3 qutoutiao_android.py
+```
