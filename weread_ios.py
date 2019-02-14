@@ -15,10 +15,8 @@ screen_width = size[0]
 screen_height = size[1]
 print(size) # iPhone 7p: Size(width=414, height=736)
 
-
 def print_click(x, y, second):
     print(str(round(second, 2)) + '秒后点击(' + str(round(x, 2)) + ', ' + str(round(y, 2)) + ')')
-
 
 while 1:
     # 随机点击坐标
