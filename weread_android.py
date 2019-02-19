@@ -5,21 +5,22 @@ import random
 # 点亮屏幕
 d.screen.on()
 info = d.info
-print(info) # 1920 * 1080
+print(info)  # 1920 * 1080
 
 screen_height = info.get('displayHeight')
 screen_width = info.get('displayWidth')
 
-
-def print_click(x, y, second):
-    print(str(round(second, 2)) + '秒后点击(' + str(round(x, 2)) + ', ' + str(round(y, 2)) + ')')
-
+def print_click(sx, sy, ex, ey, second):
+    print(str(round(second, 2)) + '秒后拖拽(' + str(round(sx, 2)) + ', ' + str(round(sy, 2)) + '), 到(' + str(
+        round(ex, 2)) + ',' + str(round(ey, 2)) + ')')
 
 while 1:
-    # android靠中间区域都是打开菜单，右边大概五分之一才能翻页
-    x = random.uniform(screen_width * 4 / 5 + 20, screen_width - 20)
-    y = random.uniform(screen_width / 2, screen_width * 2 / 3)
+    sx = random.uniform(screen_width * 2 / 3, screen_width - 20)
+    sy = random.uniform(50, screen_height - 100)
+    ex = random.uniform(20, screen_width / 3)
+    ey = random.uniform(sy - 200, sy + 200)
     second = random.uniform(12, 30)
-    print_click(x, y, second)
+    print_click(sx, sy, ex, ey, second)
     time.sleep(second)
-    d.click(x, y)
+    steps = random.uniform(10, 30)
+    d.swipe(sx, sy, ex, ey, steps)
