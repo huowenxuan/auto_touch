@@ -15,7 +15,7 @@ def print_click(sx, sy, ex, ey, second):
         round(ex, 2)) + ',' + str(round(ey, 2)) + ')')
 
 while 1:
-    sx = random.uniform(screen_width * 2 / 3, screen_width - 20)
+    sx = random.uniform(screen_width * 2 / 3, screen_width - 100)
     sy = random.uniform(50, screen_height - 100)
     ex = random.uniform(20, screen_width / 3)
     ey = random.uniform(sy - 200, sy + 200)
