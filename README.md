@@ -1,6 +1,6 @@
 # 手机端自动触摸工具
 
-## 准备工作 + 微信读书自动翻页教程
+## 准备工作 + 读书APP自动翻页教程
 ### iOS
 #### 工具
 * Mac
@@ -40,7 +40,10 @@ pip3 install uiautomator
 ```
 
 #### 执行
-在微信读书中打开一本书，然后终端执行：
+
+需要进入开发者选项，打开USB调试
+
+在读书APP中打开一本书，然后终端执行：
 
 ```
 git clone https://github.com/huowenxuan/weread_auto
