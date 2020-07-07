@@ -1,9 +1,17 @@
 import uiautomator2 as u2
 import time
 import random
+import sys
 
-d = u2.connect() # 通过USB adb链接
-# d = u2.connect('192.168.1.104') # 通过ip地址连接
+ip = ''
+
+# 获取参数，作为ip
+argv = sys.argv
+if len(argv) > 1:
+    ip = argv[1]
+
+# 有ip则是通过wifi连接，否则通过usb adb连接
+d = u2.connect(ip)
 info = d.info
 print(info)  # 1920 * 1080
 

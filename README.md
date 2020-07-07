@@ -40,9 +40,6 @@ pip3 install -U uiautomator2
 ```
 
 #### 执行
-
-需要进入开发者选项，打开USB调试
-
 在读书APP中打开一本书，然后终端执行：
 
 ```
@@ -51,10 +48,16 @@ cd auto_touch
 python3 read_android.py
 ```
 
-#### 通过WIFI控制
-修改代码
+如果通过USB控制，需要进入开发者选项，打开USB调试，执行：
+
 ```
-d = u2.connect('x.x.x.x') 
+python3 read_android.py
+```
+
+如果通过WIFI控制，需要电脑和手机连接同一WIFI，在文件名后添加手机的ip地址
+
+```
+python3 read_android.py x.x.x.x
 ```
 
 ## 趣头条小视频自动上拉（仅限android）
