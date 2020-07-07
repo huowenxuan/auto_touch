@@ -25,9 +25,9 @@ pip3 install --pre facebook-wda
 以微信读书为例。在微信读书中打开一本书，然后终端执行：
 
 ```
-git clone https://github.com/huowenxuan/weread_auto
+git clone https://github.com/huowenxuan/auto_touch
 cd auto_touch
-python3 weread_ios.py
+python3 read_ios.py
 ```
 
 ### Android
@@ -46,9 +46,9 @@ pip3 install uiautomator
 在读书APP中打开一本书，然后终端执行：
 
 ```
-git clone https://github.com/huowenxuan/weread_auto
+git clone https://github.com/huowenxuan/auto_touch
 cd auto_touch
-python3 weread_android.py
+python3 read_android.py
 ```
 
 ## 趣头条小视频自动上拉（仅限android）
