@@ -45,7 +45,6 @@ pip3 install -U uiautomator2
 ```
 git clone https://github.com/huowenxuan/auto_touch
 cd auto_touch
-python3 read_android.py
 ```
 
 如果通过USB控制，需要进入开发者选项，打开USB调试，执行：
