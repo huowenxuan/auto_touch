@@ -10,10 +10,20 @@ print(info)  # 1920 * 1080
 screen_height = info.get('displayHeight')
 screen_width = info.get('displayWidth')
 
-def print_click(sx, sy, ex, ey, second):
-    print(str(round(second, 2)) + '秒后拖拽(' + str(round(sx, 2)) + ', ' + str(round(sy, 2)) + '), 到(' + str(
-        round(ex, 2)) + ',' + str(round(ey, 2)) + ')')
-
 while 1:
-    time.sleep(0.01)
-    d.click(screen_width / 2, screen_height / 2)
+    x_center = screen_width / 2
+    y_center = screen_height / 2 - 100
+
+    # 雷戒
+    # d.click(x_center, y_center)
+    # d.click(x_center, y_center - 50)
+    # d.click(x_center, y_center - 100)
+
+    # 火戒
+    # time.sleep(.15)
+    # d.click(x_center, y_center)
+
+    # 冰戒
+    time.sleep(2)
+    d.swipe(x_center, y_center, x_center, y_center, 100);
+
