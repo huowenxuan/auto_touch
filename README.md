@@ -36,7 +36,7 @@ python3 read_ios.py
 
 #### 安装uiautomator
 ```
-pip3 install uiautomator
+pip3 install -U uiautomator2
 ```
 
 #### 执行
@@ -49,6 +49,12 @@ pip3 install uiautomator
 git clone https://github.com/huowenxuan/auto_touch
 cd auto_touch
 python3 read_android.py
+```
+
+#### 通过WIFI控制
+修改代码
+```
+d = u2.connect('x.x.x.x') 
 ```
 
 ## 趣头条小视频自动上拉（仅限android）

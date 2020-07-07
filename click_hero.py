@@ -1,9 +1,9 @@
-from uiautomator import device as d
+import uiautomator2 as u2
 import time
 import random
 
-# 点亮屏幕
-d.screen.on()
+d = u2.connect() # 通过USB adb链接
+# d = u2.connect('192.168.1.104') # 通过ip地址连接
 info = d.info
 print(info)  # 1920 * 1080
 
@@ -25,5 +25,5 @@ while 1:
 
     # 冰戒
     time.sleep(2)
-    d.swipe(x_center, y_center, x_center, y_center, 100);
+    d.long_click(x_center, y_center, 2)
 

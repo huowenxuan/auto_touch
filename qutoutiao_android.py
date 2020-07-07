@@ -1,9 +1,8 @@
-from uiautomator import device as d
+import uiautomator2 as u2
 import time
 import random
 
-# 点亮屏幕
-d.screen.on()
+d = u2.connect()
 info = d.info
 print(info) # 1920 * 1080
 
