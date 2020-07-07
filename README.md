@@ -53,7 +53,7 @@ cd auto_touch
 python3 read_android.py
 ```
 
-如果通过WIFI控制，需要电脑和手机连接同一WIFI，在文件名后添加手机的ip地址
+如果想通过WIFI控制，电脑和手机连接同一WIFI，先连接USB，执行上一步，让手机开启ATX服务后，关闭命令行，拔掉USB，再执行下面的命令。文件名后添加手机的ip地址
 
 ```
 python3 read_android.py x.x.x.x
