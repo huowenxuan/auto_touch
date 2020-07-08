@@ -30,5 +30,5 @@ while 1:
     second = random.uniform(12, 30)
     print_click(sx, sy, ex, ey, second)
     time.sleep(second)
-    steps = random.uniform(10, 30)
+    steps = random.uniform(0.1, 0.3)
     d.swipe(sx, sy, ex, ey, steps)
