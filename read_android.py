@@ -11,7 +11,11 @@ if len(argv) > 1:
     ip = argv[1]
 
 # 有ip则是通过wifi连接，否则通过usb adb连接
-d = u2.connect(ip)
+# 先尝试wifi连接
+try:
+    d = u2.connect(ip)
+except:
+    d = u2.connect()
 info = d.info
 print(info)  # 1920 * 1080
 
