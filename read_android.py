@@ -31,7 +31,7 @@ while 1:
     sy = random.uniform(50, screen_height - 100)
     ex = random.uniform(20, screen_width / 3)
     ey = random.uniform(sy - 200, sy + 200)
-    second = random.uniform(12, 30)
+    second = random.uniform(16, 30)
     print_click(sx, sy, ex, ey, second)
     time.sleep(second)
     steps = random.uniform(0.1, 0.3)
